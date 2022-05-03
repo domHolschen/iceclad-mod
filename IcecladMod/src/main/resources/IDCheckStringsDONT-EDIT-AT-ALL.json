@@ -1,0 +1,8 @@
+{
+  "DEFAULTID": "iceclad",
+  "DEVID": "icecladDev",
+  "EXCEPTION": "Go to your constructor in your class with SpireInitializer and change your mod ID from \"iceclad\"",
+  "PACKAGE_EXCEPTION": "Rename your iceclad folder (package) to match your mod ID! ",
+  "RESOURCE_FOLDER_EXCEPTION": "Rename your icecladResources folder to match your mod ID!",
+  "RESOURCES": "Resources"
+}

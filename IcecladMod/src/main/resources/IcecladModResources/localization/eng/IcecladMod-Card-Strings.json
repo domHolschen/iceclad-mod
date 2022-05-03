@@ -1,0 +1,102 @@
+{
+  "IcecladMod:BasicStrikeCard": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "IcecladMod:BasicDefendCard": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "IcecladMod:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! icecladmod:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! icecladmod:Keywords."
+  },
+  "IcecladMod:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "IcecladMod:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "IcecladMod:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X icecladmod:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 icecladmod:Keywords."
+  },
+  "IcecladMod:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "IcecladMod:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! Vulnerable to all enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to all enemies, 3 times."
+  },
+  "IcecladMod:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "IcecladMod:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !icecladmod:ENERGY_DAMAGE! damage total.)"
+  },
+  "IcecladMod:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! Vulnerable and !icecladmod:SecondMagic! poison to an enemy."
+  },
+  "IcecladMod:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "IcecladMod:IceCube": {
+    "NAME": "Ice Cube",
+    "DESCRIPTION": "Draw !M! card. NL *Exhaust. NL If this is in your hand at the end of your turn, gain !B! Block."
+  },
+  "IcecladMod:Spear": {
+    "NAME": "Spear",
+    "DESCRIPTION": "Deal !D! damage. NL *Exhaust."
+  },
+  "IcecladMod:CastSpear": {
+    "NAME": "Cast Spear",
+    "DESCRIPTION": "Add a *Spear to the top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Add a *Spear+ to the top of your draw pile."
+  },
+  "IcecladMod:BreakOut": {
+    "NAME": "Break Out",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "IcecladMod:BlockIn": {
+    "NAME": "Block In",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "IcecladMod:BrittleBlade": {
+    "NAME": "Brittle Blade",
+    "DESCRIPTION": "Deal !D! damage. NL Add an *Ice *Cube to your hand. NL *Exhaust."
+  },
+  "IcecladMod:Absorb": {
+    "NAME": "Absorb",
+    "DESCRIPTION": "Deal *50% of your missing HP as damage NL ( !D! damage ) NL If Lethal, heal !M! HP. NL *Exhaust."
+  },
+  "IcecladMod:Deploy": {
+    "NAME": "Deploy",
+    "DESCRIPTION": "Add an *Ice *Cube to your hand. NL Next turn, add !M! more *Ice *Cubes. NL *Exhaust."
+  },
+  "IcecladMod:CubeKiller": {
+    "NAME": "Cube Killer",
+    "DESCRIPTION": "Whenever you play an *Ice *Cube, deal !M! damage to a random enemy."
+  },
+  "IcecladMod:HighVelocity": {
+    "NAME": "High Velocity",
+    "DESCRIPTION": "Draw !M! cards. All icecladmod:Brisk cards in your hand are free this turn."
+  },
+  "IcecladMod:FloorIt": {
+    "NAME": "Floor It",
+    "DESCRIPTION": "Deal !D! damage. If Lethal, add icecladmod:Brisk to a random card in your deck. *Exhaust."
+  },
+  "IcecladMod:Smash": {
+    "NAME": "Smash",
+    "DESCRIPTION": "Deal !D! damage. NL Deal additional damage for the amount of icecladmod:Icicle they have and remove it."
+  }
+}

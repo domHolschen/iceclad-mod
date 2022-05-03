@@ -1,0 +1,22 @@
+{
+"IcecladMod:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+},
+"IcecladMod:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+        "IcecladMod:IceCubeNextTurn": {
+                "NAME": "Ice Cube",
+                "DESCRIPTIONS": ["At the start of your next turn, add ", " Ice Cube to your hand." , " Ice Cubes to your hand."]
+        },
+        "IcecladMod:IceCubeKillerPower": {
+                "NAME": "Cube Killer",
+                "DESCRIPTIONS": ["When an *Ice *Cube is played, deal ", " damage to a random enemy."]
+        },
+        "IcecladMod:IciclePower": {
+                "NAME": "Icicle",
+                "DESCRIPTIONS": ["On death, deal ", " damage to a random enemy."]
+        }
+}
