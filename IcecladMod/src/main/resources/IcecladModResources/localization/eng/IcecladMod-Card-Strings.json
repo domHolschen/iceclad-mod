@@ -54,14 +54,14 @@
     "NAME": "Ice Cube",
     "DESCRIPTION": "Draw !M! card. NL *Exhaust. NL If this is in your hand at the end of your turn, gain !B! Block."
   },
-  "IcecladMod:Spear": {
-    "NAME": "Spear",
+  "IcecladMod:SpearOfLight": {
+    "NAME": "Spear of Light",
     "DESCRIPTION": "Deal !D! damage. NL *Exhaust."
   },
   "IcecladMod:CastSpear": {
     "NAME": "Cast Spear",
-    "DESCRIPTION": "Add a *Spear to the top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Add a *Spear+ to the top of your draw pile."
+    "DESCRIPTION": "Add a *Spear *of *Light to the top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Add a *Spear *of *Light+ to the top of your draw pile."
   },
   "IcecladMod:BreakOut": {
     "NAME": "Break Out",
@@ -98,5 +98,28 @@
   "IcecladMod:Smash": {
     "NAME": "Smash",
     "DESCRIPTION": "Deal !D! damage. NL Deal additional damage for the amount of icecladmod:Icicle they have and remove it."
+  },
+  "IcecladMod:MirrorPlating": {
+    "NAME": "Mirror Plating",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. All cards drawn this way that cost 0 [E] are copied.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. Draw !M! cards. NL All cards drawn this way that cost 0 [E] are copied."
+  },
+  "IcecladMod:CastHammer": {
+    "NAME": "Cast Hammer",
+    "DESCRIPTION": "Add a *Hammer *of *Light to the top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Add a *Hammer *of *Light+ to the top of your draw pile."
+  },
+  "IcecladMod:HammerOfLight": {
+    "NAME": "Hammer of Light",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL *Exhaust."
+  },
+  "IcecladMod:DivineArmory": {
+    "NAME": "Divine Armory",
+    "DESCRIPTION": "Add 5 copies of *Spear *of *Light to the top of your draw pile. NL *Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add 5 copies of *Spear *of *Light+ to the top of your draw pile. NL *Exhaust."
+  },
+  "IcecladMod:Permafrost": {
+    "NAME": "Permafrost",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! icecladmod:Icebody."
   }
 }

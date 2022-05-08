@@ -30,5 +30,12 @@
       "icicle"
     ],
     "DESCRIPTION": "When the owner dies, deals damage to a random enemy."
+  },
+  {
+    "NAMES": [
+      "Icebody",
+      "icebody"
+    ],
+    "DESCRIPTION": "Gain Block at the end of your turn for the amount of Icebody you have. Reduced by 1 every time a card is played."
   }
 ]

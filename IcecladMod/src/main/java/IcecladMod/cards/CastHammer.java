@@ -1,17 +1,17 @@
 package IcecladMod.cards;
 
 import IcecladMod.IcecladMod;
+import IcecladMod.characters.IcecladCharacter;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import IcecladMod.characters.IcecladCharacter;
 
 import static IcecladMod.IcecladMod.makeCardPath;
 
-public class CastSpear extends AbstractDynamicCard {
+public class CastHammer extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -19,30 +19,30 @@ public class CastSpear extends AbstractDynamicCard {
      * A Better Defend Gain 1 Plated Armor. Affected by Dexterity.
      */
 
-    // TEXT DECLARATION 
+    // TEXT DECLARATION
 
-    public static final String ID = IcecladMod.makeID(CastSpear.class.getSimpleName());
-    public static final String IMG = makeCardPath("CastSpearPlaceholder.png");
+    public static final String ID = IcecladMod.makeID(CastHammer.class.getSimpleName());
+    public static final String IMG = makeCardPath("CastHammerPlaceholder.png");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
-    // STAT DECLARATION 	
+    // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = IcecladCharacter.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     // /STAT DECLARATION/
 
 
-    public CastSpear() {
+    public CastHammer() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.cardsToPreview = new SpearOfLight();
+        this.cardsToPreview = new HammerOfLight();
     }
 
     // Actions the card should do.

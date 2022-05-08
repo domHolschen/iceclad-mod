@@ -30,8 +30,8 @@ public class FrozenHeart extends CustomRelic {
     // ID, images, text.
     public static final String ID = IcecladMod.makeID("FrozenHeart");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("FrozenHeartPlaceholder.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("FrozenHeartPlaceholderOutline.png"));
 
     private boolean willApply = false;
 
@@ -58,7 +58,8 @@ public class FrozenHeart extends CustomRelic {
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (willApply) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new IciclePower(target, AbstractDungeon.player, damageAmount)));
+            if (damageAmount > 0)
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new IciclePower(target, AbstractDungeon.player, damageAmount)));
             this.willApply = false;
             this.pulse = false;
         }

@@ -18,5 +18,9 @@
         "IcecladMod:IciclePower": {
                 "NAME": "Icicle",
                 "DESCRIPTIONS": ["On death, deal ", " damage to a random enemy."]
+        },
+        "IcecladMod:IcebodyPower": {
+                "NAME": "Icebody",
+                "DESCRIPTIONS": ["At the end of your turn, gain ", " Block. Reduces by 1 every time a card is played."]
         }
 }

@@ -3,7 +3,7 @@
     "NAME": "Frozen Heart",
     "FLAVOR": "Much better than owning a boiling heart.",
     "DESCRIPTIONS": [
-      "The first attack of your turn applies icecladmod:Icicle for the amount of damage dealt."
+      "The first attack of your turn applies Icicle for the amount of unblocked damage dealt."
     ]
   },
   "IcecladMod:PlaceholderRelic2": {
