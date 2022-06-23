@@ -57,7 +57,7 @@ public class FrozenHeart extends CustomRelic {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if (willApply) {
+        if (willApply && info.type.equals(DamageInfo.DamageType.NORMAL)) {
             if (damageAmount > 0)
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new IciclePower(target, AbstractDungeon.player, damageAmount)));
             this.willApply = false;

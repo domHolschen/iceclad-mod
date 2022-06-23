@@ -1,8 +1,8 @@
 package IcecladMod.cards;
 
 import IcecladMod.IcecladMod;
-import IcecladMod.actions.UncommonPowerAction;
 import IcecladMod.characters.IcecladCharacter;
+import IcecladMod.powers.FrozenCorePower;
 import IcecladMod.powers.IceCubeKillerPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static IcecladMod.IcecladMod.makeCardPath;
 
-public class CubeKiller extends AbstractDynamicCard {
+public class FrozenCore extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -23,7 +23,7 @@ public class CubeKiller extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = IcecladMod.makeID(CubeKiller.class.getSimpleName());
+    public static final String ID = IcecladMod.makeID(FrozenCore.class.getSimpleName());
     public static final String IMG = makeCardPath("Power.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -43,7 +43,7 @@ public class CubeKiller extends AbstractDynamicCard {
 
     // /STAT DECLARATION/
 
-    public CubeKiller() {
+    public FrozenCore() {
 
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = MAGIC;
@@ -53,7 +53,7 @@ public class CubeKiller extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IceCubeKillerPower(p, p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrozenCorePower(p, p, magicNumber)));
     }
 
     //Upgraded stats.

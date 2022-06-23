@@ -49,8 +49,8 @@ public class Permafrost extends AbstractDynamicCard {
 
     public Permafrost() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
-        baseMagicNumber = ICEBODY;
+        block = baseBlock = BLOCK;
+        magicNumber = baseMagicNumber = ICEBODY;
     }
 
     // Actions the card should do.

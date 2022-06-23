@@ -1,17 +1,19 @@
 package IcecladMod.cards;
 
 import IcecladMod.IcecladMod;
+import IcecladMod.characters.IcecladCharacter;
+import IcecladMod.powers.IcebodyPower;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static IcecladMod.IcecladMod.makeCardPath;
 // "How come this card extends CustomCard and not DynamicCard like all the rest?"
@@ -24,7 +26,7 @@ import static IcecladMod.IcecladMod.makeCardPath;
 // Abstract Dynamic Card builds up on Abstract Default Card even more and makes it so that you don't need to add
 // the NAME and the DESCRIPTION into your card - it'll get it automatically. Of course, this functionality could have easily
 // Been added to the default card rather than creating a new Dynamic one, but was done so to deliberately to showcase custom cards/inheritance a bit more.
-public class HammerOfLight extends CustomCard {
+public class GetFrosty extends CustomCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -34,10 +36,10 @@ public class HammerOfLight extends CustomCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = IcecladMod.makeID(HammerOfLight.class.getSimpleName());
+    public static final String ID = IcecladMod.makeID(GetFrosty.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("HammerPlaceholder.png");
+    public static final String IMG = makeCardPath("SpearPlaceholder.png");
     // Setting the image as as easy as can possibly be now. You just need to provide the image name
     // and make sure it's in the correct folder. That's all.
     // There's makeCardPath, makeRelicPath, power, orb, event, etc..
@@ -56,12 +58,13 @@ public class HammerOfLight extends CustomCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = CardColor.COLORLESS;
+    public static final CardColor COLOR = IcecladCharacter.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 22;
-    private static final int UPGRADE_PLUS_DMG = 5;
-    private static final int VULNERABLE = 2;
+    private static final int DAMAGE = 12;
+    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int ICEBODY = 5;
+    private static final int UPGRADE_PLUS_ICEBODY = 2;
 
     // Hey want a second damage/magic/block/unique number??? Great!
     // Go check out DefaultAttackWithVariable and theDefault.variable.DefaultCustomVariable
@@ -81,15 +84,14 @@ public class HammerOfLight extends CustomCard {
     // UnlockTracker.unlockCard(BasicStrikeCard.ID);
     // in your main class, in the receiveEditCards() method
 
-    public HammerOfLight() {
+    public GetFrosty() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         // Aside from baseDamage/MagicNumber/Block there's also a few more.
         // Just type this.base and let intelliJ auto complete for you, or, go read up AbstractCard
 
         baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = VULNERABLE;
-        this.exhaust = true;
+        magicNumber = baseMagicNumber = ICEBODY;
     }
 
     // Actions the card should do.
@@ -106,8 +108,10 @@ public class HammerOfLight extends CustomCard {
                         // Let's find out what action *it* uses.
                         // I.e. i want energy gain or card draw, lemme check out Adrenaline
                         // P.s. if you want to damage ALL enemies OUTSIDE of a card, check out the custom orb.
-                        AbstractGameAction.AttackEffect.BLUNT_HEAVY)); // The animation the damage action uses to hit.
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false), magicNumber));
+                        AbstractGameAction.AttackEffect.SLASH_HORIZONTAL)); // The animation the damage action uses to hit.
+        if (!AbstractDungeon.player.hasPower(IcebodyPower.POWER_ID)) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IcebodyPower(p, p, magicNumber), magicNumber));
+        }
     }
 
     // Upgraded stats.
@@ -116,6 +120,7 @@ public class HammerOfLight extends CustomCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_PLUS_ICEBODY);
             initializeDescription();
         }
     }

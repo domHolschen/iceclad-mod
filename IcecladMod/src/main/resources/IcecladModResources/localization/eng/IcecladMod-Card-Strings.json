@@ -38,17 +38,9 @@
     "NAME": "In-Progress Form",
     "DESCRIPTION": "At the start of your turn, play a TOUCH."
   },
-  "IcecladMod:DefaultAttackWithVariable": {
-    "NAME": "Special Strike",
-    "DESCRIPTION": "Deal !D! damage [E] times. NL (Deal !icecladmod:ENERGY_DAMAGE! damage total.)"
-  },
   "IcecladMod:DefaultSecondMagicNumberSkill": {
     "NAME": "Cool 2 Number Card",
     "DESCRIPTION": "Apply !M! Vulnerable and !icecladmod:SecondMagic! poison to an enemy."
-  },
-  "IcecladMod:OrbSkill": {
-    "NAME": "Get Orb",
-    "DESCRIPTION": "Channel 1 Default Orb."
   },
   "IcecladMod:IceCube": {
     "NAME": "Ice Cube",
@@ -115,11 +107,42 @@
   },
   "IcecladMod:DivineArmory": {
     "NAME": "Divine Armory",
-    "DESCRIPTION": "Add 5 copies of *Spear *of *Light to the top of your draw pile. NL *Exhaust.",
-    "UPGRADE_DESCRIPTION": "Add 5 copies of *Spear *of *Light+ to the top of your draw pile. NL *Exhaust."
+    "DESCRIPTION": "Add !M! copies of *Spear *of *Light to the top of your draw pile. NL *Exhaust.",
+    "UPGRADE_DESCRIPTION": "Add !M! copies of *Spear *of *Light+ to the top of your draw pile. NL *Exhaust."
   },
   "IcecladMod:Permafrost": {
     "NAME": "Permafrost",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! icecladmod:Icebody."
+  },
+  "IcecladMod:GetFrosty": {
+    "NAME": "Get Frosty",
+    "DESCRIPTION": "Deal !D! damage. NL If you don't have any icecladmod:Icebody, gain !M! icecladmod:Icebody."
+  },
+  "IcecladMod:FrozenCore": {
+    "NAME": "Frozen Core",
+    "DESCRIPTION": "At the end of your turn, if you don't have any icecladmod:Icebody, gain !M! icecladmod:Icebody."
+  },
+  "IcecladMod:SixFeetUnder": {
+    "NAME": "Six Feet Under",
+    "DESCRIPTION": "Can only be played if you have played exactly 6 cards this turn. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "I haven't played exactly 6 cards this turn."
+    ]
+  },
+  "IcecladMod:OscillatingGem": {
+    "NAME": "Oscillating Gem",
+    "DESCRIPTION": "If the current floor # is even, draw !M! cards. If it is odd, gain [E] [E] [E]. NL Exhaust."
+  },
+  "IcecladMod:Gemini": {
+    "NAME": "Gemini",
+    "DESCRIPTION": "Draw !M! cards. NL Gain [E] for each icecladmod:Pair in your hand."
+  },
+  "IcecladMod:Snowball": {
+    "NAME": "Snowball",
+    "DESCRIPTION": "Deal !D! damage. NL Increase this card's damage by !M! this combat."
+  },
+  "IcecladMod:Claim": {
+    "NAME": "Claim",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card. NL Play ALL other copies of *Claim in your hand on random enemies."
   }
 }

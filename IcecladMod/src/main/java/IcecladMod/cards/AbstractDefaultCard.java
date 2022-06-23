@@ -1,5 +1,13 @@
 package IcecladMod.cards;
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import org.w3c.dom.ranges.Range;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public abstract class AbstractDefaultCard extends CustomCard {
 
@@ -50,5 +58,19 @@ public abstract class AbstractDefaultCard extends CustomCard {
         defaultBaseSecondMagicNumber += amount; // Upgrade the number by the amount you provide in your card.
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber; // Set the number to be equal to the base value.
         upgradedDefaultSecondMagicNumber = true; // Upgraded = true - which does what the above method does.
+    }
+
+    public int countPairs() {
+        int pairs = 0;
+        List<AbstractCard> cards = new ArrayList<>(AbstractDungeon.player.hand.group);
+        while (cards.size() > 1) {
+            AbstractCard firstCard = cards.get(0);
+            List<AbstractCard> cardsOfOneName = cards.stream().filter(x -> x.cardID.equals(firstCard.cardID)).collect(Collectors.toList());
+            pairs += cardsOfOneName.size() / 2;
+            for (AbstractCard c : cardsOfOneName) {
+                cards.remove(c);
+            }
+        }
+        return pairs;
     }
 }

@@ -22,5 +22,9 @@
         "IcecladMod:IcebodyPower": {
                 "NAME": "Icebody",
                 "DESCRIPTIONS": ["At the end of your turn, gain ", " Block. Reduces by 1 every time a card is played."]
+        },
+        "IcecladMod:FrozenCorePower": {
+                "NAME": "Frozen Core",
+                "DESCRIPTIONS": ["At the end of your turn, if you have no *Icebody, gain ", " *Icebody."]
         }
 }

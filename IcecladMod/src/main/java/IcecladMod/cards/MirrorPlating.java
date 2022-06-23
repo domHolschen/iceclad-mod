@@ -50,8 +50,8 @@ public class MirrorPlating extends AbstractDynamicCard {
 
     public MirrorPlating() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
-        baseMagicNumber = DRAW;
+        block = baseBlock = BLOCK;
+        magicNumber = baseMagicNumber = DRAW;
     }
 
     // Actions the card should do.

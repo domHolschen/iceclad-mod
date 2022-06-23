@@ -37,5 +37,21 @@
       "icebody"
     ],
     "DESCRIPTION": "Gain Block at the end of your turn for the amount of Icebody you have. Reduced by 1 every time a card is played."
+  },
+  {
+    "NAMES": [
+      "Pair",
+      "Pairs",
+      "pair",
+      "pairs"
+    ],
+    "DESCRIPTION": "Two cards of the same name."
+  },
+  {
+    "NAMES": [
+      "Retreat",
+      "retreat"
+    ],
+    "DESCRIPTION": "Returns to the top of your draw pile when played instead of discarded."
   }
 ]
